@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Criar/Editar";
+}
+
+@model ListaDeCompras.Models.Item
+
+<div class="text-center">
+    <h1 class="display-4">Criar ou Editar um Item</h1>
+</div>
+
+<form asp-action="FormCriarEditarItem" asp-controller="Home">
+    <input hidden class="form-control" type="number" placeholder="Digite a Id" asp-for="Id" />
+    
+    <label class="mt-4">Nome</label>
+    <input class="form-control" type="text" placeholder="Digite o Nome" asp-for="Nome" />
+    
+    <label class="mt-4">Valor $</label>
+    <input class="form-control" type="number" placeholder="Digite o Valor" asp-for="Valor" step="0.01" />
+
+    <button class="btn btn-primary mt-4" type="submit">Adicionar</button>
+</form>
